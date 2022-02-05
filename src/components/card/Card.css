@@ -1,0 +1,26 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+}
+.card {
+  width: 296px;
+  border: 1px solid #2e465c;
+  border-radius: 2px;
+  background-color: #f1f9ff;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+.card__title {
+  display: flex;
+  flex-direction: column;
+  padding: 12px 0px 12px 12px;
+}
+.card__title > span:last-child {
+  padding-top: 6px;
+}
+.card__date {
+  padding: 26px 12px 25px 0px;
+}
