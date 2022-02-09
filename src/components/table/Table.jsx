@@ -1,5 +1,6 @@
 import React, { useMemo, useState } from "react";
 import "./Table.css";
+import Arrow from "./../../UI/Arrow";
 
 const config = [
   { name: "id", title: "#", isSort: true },
@@ -24,6 +25,7 @@ const Table = ({ data }) => {
         : b[sortBy.name] - a[sortBy.name]
     );
   }, [tableData, sortBy]);
+
   return (
     <table>
       <tbody>
@@ -33,6 +35,7 @@ const Table = ({ data }) => {
               {title}
               {isSort && (
                 <button
+                className="btnArrow"
                   onClick={() =>
                     setSortBy((prev) => ({
                       name,
@@ -45,11 +48,7 @@ const Table = ({ data }) => {
                     }))
                   }
                 >
-                  {sortBy.name === name
-                    ? sortBy.sort === "asc"
-                      ? "+"
-                      : "-"
-                    : "+/-"}
+                  <Arrow />
                 </button>
               )}
             </th>
