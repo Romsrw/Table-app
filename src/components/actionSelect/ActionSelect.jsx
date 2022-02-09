@@ -1,10 +1,15 @@
 import React from "react";
 import CrossIcon from "./../../UI/CrossIcon";
+import Select from "./Select";
 
-const ActionSelect = ({ isVisibleType, setIsVisibleType }) => {
+const ActionSelect = ({
+  isVisibleType,
+  setIsVisibleType,
+  selectOptions,
+  removeGroup,
+}) => {
   return (
     <div className="action">
-      {isVisibleType === "cross" && <select></select>}
       <button
         onClick={() =>
           setIsVisibleType((prev) => (prev === "cross" ? "" : "cross"))
@@ -12,6 +17,7 @@ const ActionSelect = ({ isVisibleType, setIsVisibleType }) => {
       >
         <CrossIcon />
       </button>
+      {isVisibleType === "cross" && <Select options={selectOptions} />}
     </div>
   );
 };
