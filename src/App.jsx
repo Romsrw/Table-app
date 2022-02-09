@@ -34,6 +34,7 @@ const App = () => {
   );
 
   console.log(data);
+  console.log(selectOptions);
 
   return (
     <div className="App">
