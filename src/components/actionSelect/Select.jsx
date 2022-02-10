@@ -2,8 +2,9 @@ import Arrow from '../../UI/Arrow';
 import './Select.css';
 import { useEffect, useRef, useState } from 'react';
 
-const Select = ({ options }) => {
+const Select = ({ options, removeGroup }) => {
   const [isOpenSelect, setIsOpenSelect] = useState(false);
+
   const listRef = useRef();
 
   useEffect(() => {
@@ -26,7 +27,13 @@ const Select = ({ options }) => {
         >
           <div className='select__options'>
             {options.map((option) => (
-              <div className='select__option'>{option}</div>
+              <div
+                key={option}
+                className='select__option'
+                onClick={() => removeGroup(option)}
+              >
+                {option}
+              </div>
             ))}
           </div>
         </div>

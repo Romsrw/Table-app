@@ -1,8 +1,9 @@
 table {
-  width: 100%;
+  width: 296px;
   border-collapse: collapse;
   border: 1px solid #2e465c;
-  border-radius: 2px;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
   border-style: hidden;
   box-shadow: 0 0 0 1px #666;
   background-color: #f1f9ff;
@@ -14,10 +15,19 @@ th {
 }
 td {
   border: 1px solid #9cd0ff;
+  text-align: left;
+}
+td:first-child {
+  text-align: center;
+  width: 34px;
+}
+td:last-child {
+  text-align: center;
+  width: 67px;
 }
 .btnArrow {
   border: none;
   cursor: pointer;
-  
+
   background-color: transparent;
 }
